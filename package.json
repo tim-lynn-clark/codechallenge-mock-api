@@ -1,0 +1,26 @@
+{
+  "name": "codechallenge-mock-api",
+  "version": "1.0.0",
+  "description": "Mock backend for use with all code challenges requiring integration with a RESTful API.",
+  "scripts": {
+    "start": "nodemon bin/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tim-lynn-clark/codechallenge-mock-api.git"
+  },
+  "author": "Tim Clark",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/tim-lynn-clark/codechallenge-mock-api/issues"
+  },
+  "homepage": "https://github.com/tim-lynn-clark/codechallenge-mock-api#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12",
+    "prettier": "2.4.1"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^20.1.5"
+  }
+}
