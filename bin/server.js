@@ -63,6 +63,18 @@ const init = async () => {
         },
     });
 
+    server.route({
+        method: "GET",
+        path: "/coping_with_cancer",
+        handler: (request, h) => {
+            let cancerData = fs.readFileSync(
+                "./data/cancer/coping_with_cancer.json"
+            );
+            let cancerJSON = JSON.parse(cancerData);
+            return cancerJSON;
+        },
+    });
+
     await server.start();
     console.log("Server running on %s", server.info.uri);
 };
