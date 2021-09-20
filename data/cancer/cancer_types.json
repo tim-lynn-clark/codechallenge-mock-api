@@ -1,5 +1,14 @@
 [
-  "Breast Cancer",
-  "Leukemia",
-  "Lymphoma"
+  {
+    "name": "Breast Cancer",
+    "link": "http://localhost:8888/cancers/breast"
+  },
+  {
+    "name": "Leukemia",
+    "link": "http://localhost:8888/cancers/leukemia"
+  },
+  {
+    "name": "Lymphoma",
+    "link": "http://localhost:8888/cancers/lymphoma"
+  }
 ]

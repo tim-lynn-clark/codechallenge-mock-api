@@ -1,10 +1,11 @@
 "use strict";
 
 const Hapi = require("@hapi/hapi");
+const fs = require("fs");
 
 const init = async () => {
     const server = Hapi.server({
-        port: 3000,
+        port: 8888,
         host: "localhost",
     });
 
@@ -12,7 +13,53 @@ const init = async () => {
         method: "GET",
         path: "/",
         handler: (request, h) => {
-            return "Hello World!";
+            return "This is the Code Challenge RESTful mock API.";
+        },
+    });
+
+    server.route({
+        method: "GET",
+        path: "/cancer_types",
+        handler: (request, h) => {
+            let cancerData = fs.readFileSync("./data/cancer/cancer_types.json");
+            let cancerJSON = JSON.parse(cancerData);
+            return cancerJSON;
+        },
+    });
+
+    server.route({
+        method: "GET",
+        path: "/cancers/breast",
+        handler: (request, h) => {
+            let cancerData = fs.readFileSync(
+                "./data/cancer/breast_cancer.json"
+            );
+            let cancerJSON = JSON.parse(cancerData);
+            return cancerJSON;
+        },
+    });
+
+    server.route({
+        method: "GET",
+        path: "/cancers/leukemia",
+        handler: (request, h) => {
+            let cancerData = fs.readFileSync(
+                "./data/cancer/leukemia_cancer.json"
+            );
+            let cancerJSON = JSON.parse(cancerData);
+            return cancerJSON;
+        },
+    });
+
+    server.route({
+        method: "GET",
+        path: "/cancers/lymphoma",
+        handler: (request, h) => {
+            let cancerData = fs.readFileSync(
+                "./data/cancer/lymphoma_cancer.json"
+            );
+            let cancerJSON = JSON.parse(cancerData);
+            return cancerJSON;
         },
     });
 

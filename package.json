@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Mock backend for use with all code challenges requiring integration with a RESTful API.",
   "scripts": {
-    "start": "node bin/server.js",
+    "start": "nodemon bin/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,9 +16,11 @@
     "url": "https://github.com/tim-lynn-clark/codechallenge-mock-api/issues"
   },
   "homepage": "https://github.com/tim-lynn-clark/codechallenge-mock-api#readme",
-  "dependencies": {
-  },
   "devDependencies": {
+    "nodemon": "^2.0.12",
     "prettier": "2.4.1"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^20.1.5"
   }
 }
