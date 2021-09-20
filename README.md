@@ -40,8 +40,8 @@ __Format__: Array of Objects
 
     [
         {
-            "name": "Some Cancer",
-            "link": "http://localhost:8888/cancers/some_cancer"
+            "name": string,
+            "link": "http://localhost:8888/cancers/[string]"
         },
         ...
     ]
@@ -156,3 +156,21 @@ __Format__: Object
             ...
         ]
     }
+
+### Coping with Cancer
+
+__HTTP Verb__: GET
+
+__Route__: /coping_with_cancer
+
+__Description__: Provides a list of resources that provide detailed methods and additional resources for coping with cancer.
+
+__Format__: Array of Objects
+
+    [
+        {
+            "title": string,
+            "url": string
+        },
+        ...
+    ]
